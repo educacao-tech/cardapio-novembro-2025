@@ -1,14 +1,14 @@
 {
     "semana1": {
         "active": true,
-        "creche-m-verde": "",
-        "creches": "",
-        "fundamental-braga": "",
-        "fundamental-anna": "",
-        "fundamental-aaugusto": "",
-        "fundamental-esther": "",
-        "fundamental-gtl": "",
-        "etec": ""
+        "creche-m-verde": "https://docs.google.com/document/d/1RorUlhc-MReQLpOIn8MNJUeoNrzubHCs/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true",
+        "creches": "https://docs.google.com/document/d/1t7bi1iF4QL9nG1HlQhvy7DNZwpzaQ6rW/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true",
+        "fundamental-braga": "https://docs.google.com/document/d/1m9ANQmEClbfVVhlXhozSujxyN4JGg6F6/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true",
+        "fundamental-anna": "https://docs.google.com/document/d/1U32yGsydwQEUzEVDZBeP-KbBrUPntYSV/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true",
+        "fundamental-aaugusto": "https://docs.google.com/document/d/1fpRJyezD0jfpHet3P8jMjJLGZIzXW0kE/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true",
+        "fundamental-esther": "https://docs.google.com/document/d/1K47DZlmvjBY3UIfVUA_OHbVOA4g04uGW/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true",
+        "fundamental-gtl": "https://docs.google.com/document/d/10RF2X2w96-rg_yueccMqM_s1iL5WfS8V/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true",
+        "etec": "https://docs.google.com/document/d/1hSZZYesYoJO6f6dr7ZPVFbm3omO9YznG/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true"
     },
     "semana2": {
         "active": true,
