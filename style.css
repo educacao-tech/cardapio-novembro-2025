@@ -202,11 +202,11 @@
         font-weight: 500;
         transition: background-color 0.2s, transform 0.2s, filter 0.2s;
         border: 1px solid transparent;
+    }
 
-        &:hover {
-            transform: translateY(-2px);
-            filter: brightness(1.1);
-        }
+    .button:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
     }
 
     /* Estilo para botões sem link (desabilitados) */

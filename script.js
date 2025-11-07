@@ -3,7 +3,8 @@
  * @param {object} menuLinks - O objeto contendo os links dos cardápios.
  */
 function initializeApp(menuLinks) {
-    const today = new Date();
+    // Cria a data de hoje em UTC para evitar problemas com fuso horário
+    const today = new Date(new Date().setUTCHours(0, 0, 0, 0));
     today.setHours(0, 0, 0, 0);
 
     // Seleciona todas as seções de semana
@@ -48,12 +49,9 @@ function initializeApp(menuLinks) {
 
         if (!startDateAttr || !endDateAttr) return;
 
-        // Converte as strings de data (YYYY-MM-DD) para objetos Date
-        // O -1 no mês é porque os meses em JS são de 0 a 11
-        const startParts = startDateAttr.split('-');
-        const startDate = new Date(startParts[0], startParts[1] - 1, startParts[2]);
-        const endParts = endDateAttr.split('-');
-        const endDate = new Date(endParts[0], endParts[1] - 1, endParts[2]);
+        // Converte as strings de data (YYYY-MM-DD) para objetos Date em UTC
+        const startDate = new Date(`${startDateAttr}T00:00:00Z`);
+        const endDate = new Date(`${endDateAttr}T23:59:59Z`); // Considera o dia todo
 
         // Compara as datas e adiciona as classes CSS
         if (today >= startDate && today <= endDate) {
@@ -124,17 +122,11 @@ function initializeApp(menuLinks) {
     // Lógica para carregar o tema na inicialização da página
     const loadTheme = () => {
         const savedTheme = localStorage.getItem('theme');
-        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // Define o tema a ser usado: o salvo, ou a preferência do sistema, ou 'light' como padrão.
+        const themeToApply = savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-        if (savedTheme) {
-            // 1. Usa o tema salvo se existir
-            applyTheme(savedTheme);
-        } else if (systemPrefersDark) {
-            // 2. Se não houver tema salvo, usa a preferência do sistema
-            applyTheme('dark');
-        } else {
-            // 3. Padrão para o tema claro
-            applyTheme('light');
+        if (themeToApply) {
+            applyTheme(themeToApply);
         }
     };
 

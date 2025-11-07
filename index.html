@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cardápios escolares da rede municipal de Batatais para o mês de Novembro de 2025.">
+    <meta name="description"
+        content="Cardápios escolares da rede municipal de Batatais para o mês de Novembro de 2025.">
     <title>Cardápio Novembro 2025</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -156,10 +157,13 @@
 
     <button id="back-to-top" title="Voltar ao topo">↑</button>
     <footer class="main-footer">
-        <p>&copy; 2025 Secretaria da Educação de Batatais. Todos os direitos reservados.</p> 
+        <p>&copy; <span id="current-year">2025</span> Secretaria da Educação de Batatais. Todos os direitos reservados.
+        </p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <!-- Script para atualizar o ano do copyright dinamicamente -->
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
